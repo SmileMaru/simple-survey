@@ -63,6 +63,80 @@
       color: var(--subtext);
     }
 
+    .hero-wallet-viz {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+      border: 1px solid #e2e8f0;
+    }
+
+    .hero-wallet-bar {
+      display: grid;
+      grid-template-columns: 5fr 3fr 2fr;
+      border-radius: 999px;
+      overflow: hidden;
+      height: 18px;
+      box-shadow: inset 0 1px 2px rgba(15,23,42,0.08);
+      margin-bottom: 16px;
+    }
+
+    .hero-wallet-segment {
+      height: 100%;
+    }
+
+    .hero-wallet-segment.expense { background: linear-gradient(90deg, #fb923c, #fdba74); }
+    .hero-wallet-segment.invest { background: linear-gradient(90deg, #facc15, #fde68a); }
+    .hero-wallet-segment.saving { background: linear-gradient(90deg, #10b981, #6ee7b7); }
+
+    .hero-wallet-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .hero-wallet-card {
+      border-radius: 18px;
+      padding: 14px;
+      background: white;
+      border: 1px solid #e2e8f0;
+    }
+
+    .hero-wallet-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 900;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+
+    .hero-wallet-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      flex: 0 0 auto;
+    }
+
+    .hero-wallet-dot.expense { background: #fb923c; }
+    .hero-wallet-dot.invest { background: #facc15; }
+    .hero-wallet-dot.saving { background: #10b981; }
+
+    .hero-wallet-value {
+      font-size: 24px;
+      font-weight: 900;
+      color: #0f172a;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .hero-wallet-note {
+      font-size: 12px;
+      color: #64748b;
+      line-height: 1.6;
+    }
+
     .hero-note {
       text-align: center;
       color: #64748b;
@@ -291,6 +365,122 @@
       box-shadow: 0 0 16px rgba(16,185,129,0.35);
     }
 
+    .usage-visual {
+      display: grid;
+      gap: 16px;
+    }
+
+    .usage-topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      color: #334155;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .usage-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .usage-chart {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+      gap: 14px;
+    }
+
+    .usage-chart-card,
+    .usage-icons-card {
+      border-radius: 18px;
+      padding: 16px;
+      background: white;
+      border: 1px solid #e2e8f0;
+    }
+
+    .usage-chart-title,
+    .usage-icons-title {
+      color: #64748b;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .usage-bars {
+      display: grid;
+      gap: 10px;
+    }
+
+    .usage-bar-row {
+      display: grid;
+      grid-template-columns: 78px 1fr 40px;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #475569;
+    }
+
+    .usage-bar-track {
+      height: 10px;
+      background: #e2e8f0;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .usage-bar-fill {
+      height: 100%;
+      border-radius: 999px;
+    }
+
+    .usage-bar-fill.fast { width: 88%; background: linear-gradient(90deg, #2563eb, #60a5fa); }
+    .usage-bar-fill.clear { width: 76%; background: linear-gradient(90deg, #10b981, #34d399); }
+    .usage-bar-fill.sync { width: 61%; background: linear-gradient(90deg, #fb923c, #fdba74); }
+
+    .usage-icons {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .usage-icon-item {
+      text-align: center;
+      padding: 10px 8px;
+      border-radius: 16px;
+      background: #f8fafc;
+    }
+
+    .usage-icon-bubble {
+      width: 42px;
+      height: 42px;
+      margin: 0 auto 8px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 18px;
+      box-shadow: 0 10px 18px rgba(37,99,235,0.14);
+    }
+
+    .usage-icon-bubble.blue { background: linear-gradient(135deg, #2563eb, #60a5fa); }
+    .usage-icon-bubble.green { background: linear-gradient(135deg, #10b981, #34d399); }
+    .usage-icon-bubble.orange { background: linear-gradient(135deg, #f59e0b, #fb923c); }
+
+    .usage-icon-label {
+      color: #334155;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
     .chart-bars {
       display: flex;
       align-items: flex-end;
@@ -331,6 +521,11 @@
     }
 
     .option-group {
+      display: grid;
+      gap: 12px;
+    }
+
+    .option-stack {
       display: grid;
       gap: 12px;
     }
@@ -428,6 +623,36 @@
       margin-bottom: 14px;
     }
 
+    .followup-group {
+      margin-top: 18px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .followup-card {
+      border: 1.5px solid #dbeafe;
+      background: #f8fbff;
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .followup-card.is-hidden {
+      display: none;
+    }
+
+    .hint-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      margin-left: 8px;
+      border-radius: 999px;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-size: 11px;
+      font-weight: 900;
+      vertical-align: middle;
+    }
+
     .submit-btn {
       width: 100%;
       border: 0;
@@ -460,20 +685,51 @@
       .q-title, .q-title.small { font-size: 23px; }
       .pie-chart { width: 140px; height: 140px; }
       .pie-chart::after { inset: 22px; }
+      .hero-wallet-grid { grid-template-columns: 1fr; }
+      .usage-chart { grid-template-columns: 1fr; }
+      .usage-icons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     }
   </style>
 </head>
 <body>
   <div class="survey-shell">
     <div class="hero">
-      <h1 class="hero-title">💰 三錢包理財系統調查</h1>
+      <h1 class="hero-title">💰 三個錢包記帳軟體問卷</h1>
 
       <div class="hero-subcard">
         <div style="font-size:15px;">
-          這份問卷想了解你對「<strong style="color:#2563eb;">記帳 + 資金分配 + 投資追蹤 + 儲蓄目標</strong>」的需求。<br><br>
+          這份問卷想了解你對「<strong style="color:#2563eb;">記帳 + 資金分配 + 投資試算 + 儲蓄目標</strong>」的需求。<br><br>
           我們參考了「三個錢包」理財概念，將資金分成：
           <strong>消費</strong>、<strong>投資</strong>、<strong>儲蓄</strong>。<br><br>
           你將看到一些功能示意圖，請依照你的實際使用需求回答，幫助我們判斷哪些功能最值得優先開發。
+        </div>
+
+        <div class="hero-wallet-viz">
+          <div class="hero-wallet-bar">
+            <div class="hero-wallet-segment expense"></div>
+            <div class="hero-wallet-segment invest"></div>
+            <div class="hero-wallet-segment saving"></div>
+          </div>
+
+          <div class="hero-wallet-grid">
+            <div class="hero-wallet-card">
+              <div class="hero-wallet-label"><span class="hero-wallet-dot expense"></span>消費</div>
+              <div class="hero-wallet-value">50%</div>
+              <div class="hero-wallet-note">日常生活、娛樂、餐飲等經常性支出。</div>
+            </div>
+
+            <div class="hero-wallet-card">
+              <div class="hero-wallet-label"><span class="hero-wallet-dot invest"></span>投資</div>
+              <div class="hero-wallet-value">30%</div>
+              <div class="hero-wallet-note">定期投入資產配置，讓資金持續成長。</div>
+            </div>
+
+            <div class="hero-wallet-card">
+              <div class="hero-wallet-label"><span class="hero-wallet-dot saving"></span>儲蓄</div>
+              <div class="hero-wallet-value">20%</div>
+              <div class="hero-wallet-note">保留緊急預備金與中短期目標資金。</div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -481,21 +737,120 @@
     </div>
 
     <form id="surveyForm" novalidate>
+      <!-- Q0 -->
+      <section class="section-card q-card" data-name="accounting_usage">
+        <div class="section-tag tag-blue">ACCOUNTING HABITS</div>
+        <h2 class="q-title">1. 平常有在使用記帳軟體嗎？ <span class="required">*</span></h2>
+        <div class="q-subtitle">
+          想先了解你目前有沒有用現成的記帳工具，以及它吸引你的地方。
+        </div>
+        <div class="error-text"><i class="fas fa-circle-exclamation"></i> 請選擇一個選項</div>
+
+        <div class="viz-wrap preview-box">
+          <div class="usage-visual">
+            <div class="usage-topline">
+              <span>常見吸引點通常來自操作省時與資訊清楚</span>
+              <span class="usage-badge"><i class="fas fa-receipt"></i> 記帳習慣</span>
+            </div>
+
+            <div class="usage-chart">
+              <div class="usage-chart-card">
+                <div class="usage-chart-title">常見選擇考量</div>
+                <div class="usage-bars">
+                  <div class="usage-bar-row">
+                    <span>快速輸入</span>
+                    <div class="usage-bar-track"><div class="usage-bar-fill fast"></div></div>
+                    <span>88%</span>
+                  </div>
+                  <div class="usage-bar-row">
+                    <span>清楚分類</span>
+                    <div class="usage-bar-track"><div class="usage-bar-fill clear"></div></div>
+                    <span>76%</span>
+                  </div>
+                  <div class="usage-bar-row">
+                    <span>自動同步</span>
+                    <div class="usage-bar-track"><div class="usage-bar-fill sync"></div></div>
+                    <span>61%</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="usage-icons-card">
+                <div class="usage-icons-title">常見吸引點</div>
+                <div class="usage-icons">
+                  <div class="usage-icon-item">
+                    <div class="usage-icon-bubble blue"><i class="fas fa-bolt"></i></div>
+                    <div class="usage-icon-label">快速<br>記帳</div>
+                  </div>
+                  <div class="usage-icon-item">
+                    <div class="usage-icon-bubble green"><i class="fas fa-layer-group"></i></div>
+                    <div class="usage-icon-label">分類<br>清楚</div>
+                  </div>
+                  <div class="usage-icon-item">
+                    <div class="usage-icon-bubble orange"><i class="fas fa-chart-pie"></i></div>
+                    <div class="usage-icon-label">報表<br>好懂</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <div class="option-stack">
+            <label class="option-item">
+              <input type="radio" name="accounting_usage" value="有">
+              <div class="option-box">
+                <div class="option-title">有，在使用記帳軟體</div>
+                <div class="option-desc">我目前有固定或偶爾使用某個記帳工具。</div>
+              </div>
+            </label>
+
+            <div id="softwareNameWrap" class="followup-card is-hidden">
+              <label class="field-label" for="software_name">1-1. 如果有，是使用什麼記帳軟體呢？</label>
+              <input
+                type="text"
+                id="software_name"
+                name="software_name"
+                class="text-input"
+                placeholder="例如：CWMoney、麻布記帳、Moneybook、記帳城市、Excel / Google Sheets"
+              >
+            </div>
+
+            <div id="softwareReasonWrap" class="followup-card is-hidden">
+              <label class="field-label" for="software_reason">1-2. 這個記帳軟體是什麼吸引你呢？</label>
+              <textarea
+                id="software_reason"
+                name="software_reason"
+                class="textarea-input"
+                rows="3"
+                placeholder="例如：介面清楚、自動分類、同步快、報表容易看懂..."
+              ></textarea>
+            </div>
+          </div>
+
+          <label class="option-item">
+            <input type="radio" name="accounting_usage" value="沒有">
+            <div class="option-box">
+              <div class="option-title">沒有，目前沒在使用</div>
+              <div class="option-desc">我現在沒有使用記帳軟體，或曾用過但已停止。</div>
+            </div>
+          </label>
+        </div>
+      </section>
+
       <!-- Q1 -->
       <section class="section-card q-card" data-name="q1">
         <div class="section-tag tag-blue">DISTRIBUTION</div>
-        <h2 class="q-title">1. 你會希望系統自動分配資金嗎？ <span class="required">*</span></h2>
+        <h2 class="q-title">2. 會想要使用自動分配金額的記帳嗎？ <span class="required">*</span></h2>
         <div class="q-subtitle">
-          例如每月或每筆記帳後，自動分配到「消費 / 投資 / 儲蓄」，減少手動計算的負擔。
+          每月金額分配，自動或個人調整依比例分配到「消費 / 投資 / 儲蓄」，減少手動計算的負擔。
         </div>
         <div class="error-text"><i class="fas fa-circle-exclamation"></i> 請選擇一個選項</div>
 
         <div class="viz-wrap">
           <div class="pie-area">
             <div class="pie-chart">
-              <div class="pie-center">
-                建議比例<br>50 / 30 / 20
-              </div>
             </div>
             <div class="legend-row">
               <span><span class="legend-dot" style="background:#fb923c;"></span>消費 50%</span>
@@ -535,7 +890,7 @@
       <!-- Q2 -->
       <section class="section-card q-card" data-name="q2">
         <div class="section-tag tag-orange">EXPENSE</div>
-        <h2 class="q-title">2. 你會希望系統提供支出分類與預算提醒嗎？ <span class="required">*</span></h2>
+        <h2 class="q-title">3. 你會希望系統提供支出分類與預算提醒嗎？ <span class="required">*</span></h2>
         <div class="q-subtitle">
           把支出分成固定支出與變動支出，並在接近預算上限時主動提醒。
         </div>
@@ -589,7 +944,7 @@
       <!-- Q3 -->
       <section class="section-card q-card dark" data-name="q3">
         <div class="section-tag tag-cyan">INVESTMENT ANALYTICS</div>
-        <h2 class="q-title small">3. 你會想追蹤投資績效或試算報酬嗎？ <span class="required">*</span></h2>
+        <h2 class="q-title small">4. 你會想追蹤投資績效或試算報酬嗎？ <span class="required">*</span></h2>
         <div class="q-subtitle">
           適合想看報酬表現、資產變化，或模擬定期定額結果的使用者。
         </div>
@@ -634,7 +989,7 @@
       <!-- Q4 -->
       <section class="section-card q-card green" data-name="q4">
         <div class="section-tag tag-green">SAVINGS PLAN</div>
-        <h2 class="q-title">4. 你會希望系統幫你追蹤儲蓄目標嗎？ <span class="required">*</span></h2>
+        <h2 class="q-title">5. 你會希望系統幫你追蹤儲蓄目標嗎？ <span class="required">*</span></h2>
         <div class="q-subtitle">
           例如旅遊基金、緊急預備金、買車基金，並顯示目前進度與預估達成時間。
         </div>
@@ -667,13 +1022,13 @@
             </div>
           </label>
 
-          <label class="option-item">
+          <!-- <label class="option-item">
             <input type="radio" name="q4" value="最需要壓力測試">
             <div class="option-box">
               <div class="option-title">最需要存錢壓力測試</div>
               <div class="option-desc">我想知道不同存錢速度對生活壓力的影響。</div>
             </div>
-          </label>
+          </label> -->
         </div>
 
         <label class="field-label" for="q4_text">其他想補充的儲蓄功能</label>
@@ -683,7 +1038,7 @@
       <!-- Q5 -->
       <section class="section-card q-card identity" data-name="username">
         <div class="section-tag tag-slate">IDENTITY</div>
-        <h2 class="q-title">5. 如何稱呼您？ <span class="required">*</span></h2>
+        <h2 class="q-title">6. 如何稱呼您？ <span class="required">*</span></h2>
         <div class="q-subtitle">
           留下暱稱即可，方便我們辨識回饋內容。
         </div>
@@ -711,27 +1066,54 @@
   </div>
 
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxeFQB-8LjrgB_eGFTwPW3X-4_SPjKeciQuWIU0iKDJuvPBYwRG2ZM06EBzA31crQ1CEg/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyQNtRan73UZ3mcIQ55gxNFFe-tbxwBlit77KHGwelZknq_uH35gntPlPsIHtRGwSJYmQ/exec';
     const form = document.getElementById('surveyForm');
     const btn = document.getElementById('submitBtn');
+    const accountingUsageInputs = form.querySelectorAll('input[name="accounting_usage"]');
+    const softwareNameWrap = document.getElementById('softwareNameWrap');
+    const softwareReasonWrap = document.getElementById('softwareReasonWrap');
+    const softwareNameInput = document.getElementById('software_name');
+    const softwareReasonInput = document.getElementById('software_reason');
 
     const clearErrorState = (card) => {
       if (card) card.classList.remove('card-error');
     };
 
+    const toggleAccountingFollowups = () => {
+      const selectedUsage = form.querySelector('input[name="accounting_usage"]:checked')?.value;
+      const shouldShow = selectedUsage === '有';
+
+      softwareNameWrap.classList.toggle('is-hidden', !shouldShow);
+      softwareReasonWrap.classList.toggle('is-hidden', !shouldShow);
+
+      softwareNameInput.disabled = !shouldShow;
+      softwareReasonInput.disabled = !shouldShow;
+
+      if (!shouldShow) {
+        softwareNameInput.value = '';
+        softwareReasonInput.value = '';
+      }
+    };
+
     form.querySelectorAll('input[type="radio"]').forEach(input => {
-      input.addEventListener('change', () => clearErrorState(input.closest('.q-card')));
+      input.addEventListener('change', () => {
+        clearErrorState(input.closest('.q-card'));
+        if (input.name === 'accounting_usage') toggleAccountingFollowups();
+      });
     });
 
     form.querySelectorAll('input[type="text"], textarea').forEach(input => {
       input.addEventListener('input', () => clearErrorState(input.closest('.q-card')));
     });
 
+    toggleAccountingFollowups();
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
 
       let firstErrorCard = null;
       const qCards = form.querySelectorAll('.q-card');
+      const selectedAccountingUsage = form.querySelector('input[name="accounting_usage"]:checked')?.value;
 
       qCards.forEach(card => {
         const name = card.getAttribute('data-name');
@@ -746,6 +1128,12 @@
           } else if (first.type === 'text') {
             isValid = first.value.trim() !== '';
           }
+        }
+
+        if (name === 'accounting_usage' && selectedAccountingUsage === '有') {
+          isValid = isValid
+            && softwareNameInput.value.trim() !== ''
+            && softwareReasonInput.value.trim() !== '';
         }
 
         if (!isValid) {
